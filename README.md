@@ -1,2 +1,15 @@
-# MovieVerse-Using-The-Movie-Database-API
-A movie discovery app that fetches and displays popular movies with their details using The Movie Database (TMDb) API. Users can search for movies and view ratings, overviews, and posters.
+# Movie App
+
+A web app that displays movies based on popularity or search terms using The Movie Database (TMDb) API.
+
+## Features
+- Search for movies by title
+- View movie posters and ratings
+- 3D flip effect for movie cards
+
+## Getting Started
+To run the project locally:
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/your-username/movie-app.git](https://github.com/SpandanDK189/MovieVerse-Using-The-Movie-Database-API.git)
