@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #e50914;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding-top: 80px; /* Adjust this based on the actual height of the header */
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: center; /* Align items vertically */
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  position: fixed; /* Makes the header fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensures the header is always on top */
+}
+
+.home-icon {
+  color: white; /* Set icon color */
+  font-size: 1.5rem; /* Adjust the size */
+  text-decoration: none; /* Remove underline from the link */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-right: auto; /* Push the icon to the left */
+}
+
+.home-icon:hover {
+  color: var(--secondary-color); /* Change color on hover */
+}
+
+.search-container {
+  flex-grow: 1; /* Take up remaining space to center the search box */
+  display: flex;
+  justify-content: center; /* Center the search box */
+}
+
+.search {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid var(--secondary-color);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search::placeholder {
+  color: var(--secondary-color);
+}
+
+.search:focus::placeholder {
+  opacity: 0; /* Hide the placeholder text when the input is focused */
+}
+
+.search:focus {
+  outline: none;
+  border-bottom-color: #fff;
+}
+
+main {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.movie {
+  perspective: 1000px;
+  width: 300px;
+  margin: 1rem;
+}
+
+.movie-inner {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.movie:hover .movie-inner {
+  transform: rotateY(180deg);
+}
+
+.movie-front,
+.movie-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.movie-front {
+  background-color: var(--secondary-color);
+}
+
+.movie-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure it covers the full space */
+}
+
+.rating {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  backdrop-filter: blur(5px); /* Add blur effect to the background */
+}
+
+.rating span.green {
+  color: lightgreen;
+}
+
+.rating span.orange {
+  color: orange;
+}
+
+.rating span.red {
+  color: red;
+}
+
+.movie-back {
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align the content at the top */
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color); /* Border for the back side */
+}
+
+.movie-back h3 {
+  margin-bottom: 0.5rem;
+  font-size: x-large;
+  color: var(--secondary-color);
+}
+
+.movie-back h4 {
+  margin-bottom: 1rem;
+}
+
+.movie-back p {
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
