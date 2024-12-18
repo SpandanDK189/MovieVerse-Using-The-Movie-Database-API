@@ -12,4 +12,4 @@ To run the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/movie-app.git](https://github.com/SpandanDK189/MovieVerse-Using-The-Movie-Database-API.git)
+   git clone https://github.com/SpandanDK189/MovieVerse-Using-The-Movie-Database-API.git
